@@ -1,0 +1,93 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="airbnb" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="24156710-c128-409f-ae2c-eb6ebbebc3e0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<query language="sql"><![CDATA[]]></query>
+	<field name="name" class="java.lang.String"/>
+	<field name="id" class="java.lang.Long"/>
+	<field name="numberOfReviews" class="java.lang.Integer"/>
+	<field name="neighbourhoodCleansed" class="java.lang.String"/>
+	<field name="price" class="java.lang.String"/>
+	<field name="reviewScoreRating" class="java.lang.Double"/>
+	<title height="55" splitType="Stretch">
+		<element kind="staticText" uuid="a950915b-3d1e-41e7-a7b2-2a3a2efdefea" x="0" y="0" width="555" height="39" fontName="SansSerif" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Relatório Exploratório do Mercado de Aluguel de Curta Duração]]></text>
+		</element>
+		<element kind="textField" uuid="0a66ac9e-5fc4-4714-b52f-aa8cfe334a04" x="429" y="40" width="126" height="14" pattern="dd/MM/yyyy h:mm a" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</title>
+	<columnHeader height="30">
+		<element kind="staticText" uuid="63c7e8c6-526c-4f0b-a529-b932df0b80a5" x="0" y="0" width="60" height="30" fontSize="8.0" bold="true" hTextAlign="Left" vTextAlign="Middle">
+			<text><![CDATA[ID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0aa1b902-d9ab-498d-86ec-8e71cae67d08"/>
+			<box>
+				<bottomPen lineWidth="0.5"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="787e8662-0c59-4d8e-a64e-755e5789d66b" x="60" y="0" width="139" height="30" fontSize="8.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Nome]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="556ab953-2d05-46e4-9d7c-b569c27e5f45"/>
+			<box>
+				<bottomPen lineWidth="0.5"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="e707b331-f059-4f75-afc8-e2601f8298a8" x="199" y="0" width="181" height="30" fontSize="8.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Bairro]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f7f7150a-568c-4503-a796-eb820ae0b4ac"/>
+			<box>
+				<bottomPen lineWidth="0.5"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="07a49be9-2d66-4384-9509-63d36f15086b" x="429" y="0" width="61" height="30" fontSize="8.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Preço]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b03784f5-9a4d-4456-a40e-cf05d3dc254f"/>
+			<box>
+				<bottomPen lineWidth="0.5"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="0687d92b-a833-4c45-985a-089ad2f96f13" x="490" y="0" width="65" height="30" fontSize="8.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Nota]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e0a0d8a9-c3f0-4369-83c4-1dde6304c02d"/>
+			<box>
+				<bottomPen lineWidth="0.5"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="3bce18a5-2f99-4629-b7c3-836a4a97154f" x="380" y="0" width="49" height="30" fontSize="8.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Nº de Avaliações]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea49dd0c-af4f-4fab-bcba-41ff950f8117"/>
+			<box>
+				<bottomPen lineWidth="0.5"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<printWhenExpression><![CDATA[$F{price} != null]]></printWhenExpression>
+			<element kind="textField" uuid="0ecddea9-3419-4bcf-84a6-3f27a09a1662" x="0" y="0" width="60" height="30" fontSize="8.0" hTextAlign="Left" vTextAlign="Middle">
+				<expression><![CDATA[$F{id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0aa1b902-d9ab-498d-86ec-8e71cae67d08"/>
+			</element>
+			<element kind="textField" uuid="92c98fd9-559c-4a8f-b161-bae759cea2c2" x="60" y="0" width="139" height="30" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{name}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="556ab953-2d05-46e4-9d7c-b569c27e5f45"/>
+			</element>
+			<element kind="textField" uuid="ad24374a-71b2-47f7-9662-c0951afcdf9e" x="199" y="0" width="181" height="30" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{neighbourhoodCleansed}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f7f7150a-568c-4503-a796-eb820ae0b4ac"/>
+			</element>
+			<element kind="textField" uuid="465c2f0a-458e-4500-8e58-4a121986c1a5" x="429" y="0" width="61" height="30" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+				<printWhenExpression><![CDATA[$F{price} != null]]></printWhenExpression>
+				<expression><![CDATA[$F{price}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b03784f5-9a4d-4456-a40e-cf05d3dc254f"/>
+			</element>
+			<element kind="textField" uuid="b9c79b2c-cbb0-435c-99e0-ed95da78067d" x="490" y="0" width="65" height="30" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{reviewScoreRating}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e0a0d8a9-c3f0-4369-83c4-1dde6304c02d"/>
+			</element>
+			<element kind="textField" uuid="734b22cf-5ab6-4a0c-881c-29e4b435f09a" x="380" y="0" width="49" height="30" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{numberOfReviews}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea49dd0c-af4f-4fab-bcba-41ff950f8117"/>
+			</element>
+		</band>
+	</detail>
+</jasperReport>
